@@ -22,18 +22,47 @@
 
 
             //Task 2
-            Console.WriteLine("Enter a number");
-            float number = float.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a number");
+            //float number = float.Parse(Console.ReadLine());
 
-            if (number % 2 == 0)
+            //if (number % 2 == 0)
+            //{
+            //    Console.WriteLine("The number is Even");
+            //}
+
+            //else
+            //{
+            //    Console.WriteLine("The number is Odd");
+            //}
+
+
+
+            //Task 3
+            Console.WriteLine("Enter how many numbers you need :");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] numbers = new int[n];
+
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("The number is Even");
+                Console.WriteLine("Enter number : ");
+                numbers[i] = int.Parse(Console.ReadLine());
             }
 
-            else
+            // Set smallest as the first number in the list
+            int smallest = numbers[0];
+
+            // Check each number in the list
+            for (int i = 1; i < n; i++)
             {
-                Console.WriteLine("The number is Odd");
+                if (numbers[i] < smallest)
+                {
+                    smallest = numbers[i];
+                }
             }
+
+            // Output the result
+            Console.WriteLine("The smallest number is: " + smallest);
 
         }
     }
